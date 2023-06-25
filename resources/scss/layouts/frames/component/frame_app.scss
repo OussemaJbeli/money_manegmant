@@ -1,0 +1,10 @@
+.frame_app{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+/*******searsh*****/
+@import "container/searsh_barre.scss";
+/*******container***/
+@import "../../pages/pages.scss";

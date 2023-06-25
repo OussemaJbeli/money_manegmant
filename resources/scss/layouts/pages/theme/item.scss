@@ -1,0 +1,34 @@
+.theme{
+    position: absolute;
+    right: 0px;
+    top: 20px;
+    display: flex;
+    flex-direction: row;
+    .theme_changer_button{
+        margin-top: 50px;
+        width: 70px;
+        height: 50px;
+        background-color: var(--side_color_cards);
+        border-style: solid;
+        border-radius: 20px 0 0 20px;
+        border-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        i{
+            font-size: 35px;
+            animation:rotate_theme 2s linear infinite;
+        }
+        @keyframes rotate_theme {
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        .theme_changer{
+            display: none;
+        }
+    }
+}
+/*******add_popup***/
+@import "them_popup.scss";

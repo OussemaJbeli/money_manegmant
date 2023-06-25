@@ -1,0 +1,34 @@
+:root{
+    --font_main :Helvetica,Arial,sans-serif;
+    --font_color_actif :#fff;
+    --font_color_inactif :#918f8f;
+    --color_item: #2a3347;
+    --title :#fff;
+}
+*{
+    padding-top: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font_main);
+    transition: .4s ease;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    background-color: var(--color_frame);
+}
+/*******side*****/
+@import "component/sid_barre.scss";
+/*******container*****/
+@import "component/frame_app.scss";

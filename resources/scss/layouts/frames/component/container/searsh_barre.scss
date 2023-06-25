@@ -1,0 +1,52 @@
+.searsh_barre{
+    width: 100%;
+    height: 10%;
+    background-color: var(--color_search_barre);
+    box-shadow: 0 0 25px -10px #000;
+    border-style: solid;
+    border-color: transparent;
+    border-radius: 5px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .minimise_side_barre{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        i{
+            font-size: 35px;
+            color: var(--title_search_bar);
+            cursor: pointer;
+        }
+        #minimise{
+            display: none;
+        }
+        .logo_page{
+            margin-left: 30px;
+            i{
+                color: var(--font_color_inactif);
+                font-size: 20px;
+            }
+        }
+        .path_page{
+            margin-left: 10px;
+            font-family: var(--font_main);
+            color: var(--font_color_inactif);
+            font-size: 20px;
+            p{
+                text-transform: uppercase;
+                margin: 0;
+            }
+        }
+    }
+    .logo_profile{
+        width: 40px;
+        height: 40px;
+        background-color: var(--title_search_bar);
+        border-style: solid;
+        border-color: transparent;
+        border-radius: 50%;
+    }
+}
