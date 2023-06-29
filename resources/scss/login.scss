@@ -1,3 +1,679 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+} 
 body{
-    background-color: #000;
+    overflow: hidden;
+    .login{
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .bgs{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        .bg1{
+            z-index: -1;
+        }
+        .left_tree{
+            z-index: -2;
+        }
+        .right_tree{
+            z-index: -3;
+        }
+        .bg2{
+            z-index: -4;
+        }
+        .bg3{
+            z-index: -5;
+        }
+        .bg4{
+            z-index: -6;
+            .sun{
+                position: absolute;
+                top: 30%;
+                left: 40%;
+                width: 20vw;
+                height: 20vw;
+                background-color: #f4e8e6;
+                box-shadow: 0 0 50px 10px #ecc8c0;
+                border: 0 solid transparent;
+                border-radius: 50%;
+            }
+        }
+        .bg5{
+            z-index: -7;
+        }
+        ///////////form-login
+        form{
+            position: relative;
+            width: 450px;
+            height:450px;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            flex-direction: column;
+            border-radius: 10px;
+            border-color: transparent;
+            border-style: solid;
+            background: linear-gradient(180deg, #16607d00 50%, #0312297e);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            .bear_avatar{
+                position: absolute;
+                top: -125px;
+                width: 220px;
+                height: 220px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-direction: column;
+                border:0px solid transparent;
+                border-radius: 50%;
+                background-color: #16607d;
+                overflow: hidden;
+                background-image: url(../../public/icon/login/bear_avatar.png);
+                background-position: 0% 100%;
+                background-size: 90% 90%;
+                background-repeat: no-repeat;
+                .eye_frame{
+                    width: 26%;
+                    height: 65px;
+                    .eyes{
+                        position: relative;
+                        top: 90%;
+                        display: flex;
+                        justify-content: space-between;
+                        flex-direction: row;
+                        overflow: hidden;
+                        .eye{
+                            position: relative;
+                            width: 25px;
+                            height: 25px;
+                            border-radius: 50%;
+                            background: #ffffff;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            overflow: hidden;
+                            .pupil{
+                                position: absolute;
+                                top: 20%;
+                                left: 20%;
+                                width: 10px;
+                                height: 10px;
+                                border: 0 solid transparent;
+                                border-radius: 50%;
+                                background: #0e4d5d;
+                                z-index: 0;
+                            }
+                        }
+                        .roumouch{
+                            position: absolute;
+                            top: -100%;
+                            width: 100%;
+                            height: 100%;
+                            background-color: #ffffff;
+                            z-index: 9;
+                            animation: roumouch 2s ease infinite;
+                        }
+                    }
+                }
+                //mouth
+                .mouth_frame{
+                    position: relative;
+                    width: 50px;
+                    height: 110px;
+                    display: flex;
+                    justify-content: center;
+                    .mouth{
+                        width: 35px;
+                        height: 5px;
+                        border: 0 solid transparent;
+                        border-radius: 0 0% 50% 50%;
+                        background: #ffffff;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+                //hand
+                .left_hand{
+                    position: absolute;
+                    top: 0;
+                    height: 250px;
+                    width: 100px;
+                    transform: rotateZ(150deg) translate(-40px,-250px);
+                    background-image: url(../../public/icon/login/hand.png);
+                    background-position: 0% 100%;
+                    background-size: 90% 90%;
+                    background-repeat: no-repeat;
+                    z-index: 999;
+                }
+                .right_hand{
+                    position: absolute;
+                    top: 0;
+                    height: 250px;
+                    width: 100px;
+                    transform: rotateZ(210deg) rotateY(150deg) translate(-40px,-250px);
+                    background-image: url(../../public/icon/login/hand.png);
+                    background-position: 0% 100%;
+                    background-size: 90% 90%;
+                    background-repeat: no-repeat;
+                    z-index: 999;
+                }
+            }
+            input{
+                width: 20vw;
+                height: 5vh;
+                margin-top: 5vh;
+                border-style: solid;
+                background-color: transparent;
+                border-color: transparent transparent #16607d;
+                color: #031229;
+                font-size: 1vw;
+                font-weight: 900;
+                outline: none;
+            }
+            #forget{
+                width: 100%;
+                margin:3% 0 3% 110%;
+                font-size: 1vw;
+                font-weight: 900;
+                color: #16607d;
+            }
+            #login{
+                background-color: #16607d;
+                border-radius: 10px;
+                color: #fff;
+                font-size: 1.2vw;
+                font-weight: 900;
+                height: 7vh;
+                margin: 0;
+                cursor: pointer;
+                transition: .4s ease;
+            }
+            #login:hover{
+                transform: scale(1.1);
+            }
+            .disc{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 20%;
+                p{
+                    font-size: 20px;
+                    font-weight: 900;
+                    color: #ffffff;
+                    margin-right: 10px;
+                }
+                .register{
+                    margin: 0;
+                    font-size: 20px;
+                    font-weight: 900;
+                    color: #16607d;
+                    cursor: pointer;
+                } 
+            }
+        }
+    }
+    .new{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #031229;
+        // background-image: url(../../public/icon/login/new_user.jpg);
+        // background-position: center;
+        // background-size: cover;
+        // background-repeat: no-repeat;
+        .up{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 50px;
+            height: 50px;
+            border: 2px solid transparent;
+            border-radius: 50%;
+            background-color: #051936;
+            box-shadow: 0 0 15px 1px #16607d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            i{
+                color: #16607d;
+                font-size: 55px;
+            }
+        }
+        form{
+            width: 80%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            .create_info{
+                position: relative;
+                width: 500px;
+                height: 600px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                overflow: hidden;
+                border: 0 solid transparent;
+                border-radius: 0 60px 0 60px;
+                .fildes{
+                    width: 99%;
+                    height: 99%;
+                    background-color: #051936;
+                    z-index: 1;
+                    border: 0 solid transparent;
+                    border-radius: 0 60px 0 60px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    p{
+                        width: 100%;
+                        height: 20%;
+                        font-size: 35px;
+                        font-weight: 900;
+                        text-transform: uppercase;
+                        color: #16607d;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    .inputs{
+                        width: 100%;
+                        height: 40%;
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        flex-direction: column;
+                        .input{
+                            width: 70%;
+                            height: 50px;
+                            border-style:solid;
+                            border-color: transparent transparent #16607d;
+                            outline: none;
+                            background-color: transparent;
+                            color: #fff;
+                            font-size: 20px;
+                        }
+                    }
+                    .sub_user{
+                        width: 100%;
+                        height: 20%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        #new_user_submit{
+                            width: 50%;
+                            height: 50px;
+                            border-radius: 10px;
+                            border: 0px solid #16607d;
+                            background-color: #16607d;
+                            color: #fff;
+                            font-size: 25px;
+                            transition: .4s ease;
+                        }
+                        #new_user_submit:hover{
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+            .create_info::after{
+                content: '';
+                position: absolute;
+                width: 50%;
+                height: 150%;
+                background: linear-gradient(#16607d, #8d1c78);
+                animation: rotate_new_user 5s linear infinite;
+            }
+            .avatars_selector{
+                position: relative;
+                width: 650px;
+                height: 600px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                overflow: hidden;
+                border: 0 solid transparent;
+                border-radius: 60px 0 60px 0;
+                .panel{
+                    width: 99%;
+                    height: 99%;
+                    background-color: #051936;
+                    z-index: 1;
+                    border: 0 solid transparent;
+                    border-radius: 60px 0 60px 0;
+                    .security_question{
+                        width: 100%;
+                        height: 30%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        p{
+                            width: 100%;
+                            height: 30%;
+                            font-size: 35px;
+                            font-weight: 900;
+                            text-transform: uppercase;
+                            color: #16607d;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                        .input{
+                            width: 70%;
+                            height: 50px;
+                            border-style:solid;
+                            border-color: transparent transparent #16607d;
+                            outline: none;
+                            background-color: transparent;
+                            color: #fff;
+                            font-size: 20px;
+                        }
+                        /* Style the dropdown list */
+                        select {
+                            /* Add a background color */
+                            background-color: #f1f1f1;
+                            /* Change the font color */
+                            color: #333;
+                            /* Adjust the border */
+                            border: 1px solid #ccc;
+                            /* Modify the padding */
+                            padding: 8px;
+                            /* Change the font size */
+                            font-size: 14px;
+                            option {
+                                /* Add background and font color */
+                                background-color: #f1f1f1;
+                                color: #000;
+                            }
+                            option:focus {
+                                /* Add a background color */
+                                background-color: #ebebeb;
+                                outline: 2px solid #16607d;
+                            }
+                        }
+                    }
+                    .avatars{
+                        width: 100%;
+                        height: 70%;
+                        p{
+                            width: 100%;
+                            height: 20%;
+                            font-size: 35px;
+                            font-weight: 900;
+                            text-transform: uppercase;
+                            color: #16607d;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                        .avatars_panel{
+                            width: 100%;
+                            height: 80%;
+                            display: flex;
+                            flex-direction: row;
+                            flex-wrap: wrap;
+                            justify-content: center;
+                            .avatar_img{
+                                width: 100px;
+                                height: 100px;
+                                margin: 0 0 10px 10px;
+                                border: 0 solid transparent;
+                                border-radius: 50%;
+                                background-position: center;
+                                background-size: cover;
+                                background-repeat: no-repeat;
+                                transition: .4s ease;
+                                .radio_avatar{
+                                    display: none;
+                                }
+                            }
+                            .avatar_img:hover{
+                                background-color: #16607d;
+                                box-shadow: 0 0 15px 1px #16607d;
+                            }
+                            .ava1{
+                                background-image: url(../../public/icon/sid_bar/avatar/1.png);
+                            }
+                            .ava2{
+                                background-image: url(../../public/icon/sid_bar/avatar/2.png);
+                            }
+                            .ava3{
+                                background-image: url(../../public/icon/sid_bar/avatar/3.png);
+                            }
+                            .ava4{
+                                background-image: url(../../public/icon/sid_bar/avatar/4.png);
+                            }
+                            .ava5{
+                                background-image: url(../../public/icon/sid_bar/avatar/5.png);
+                            }
+                            .ava6{
+                                background-image: url(../../public/icon/sid_bar/avatar/6.png);
+                            }
+                            .ava7{
+                                background-image: url(../../public/icon/sid_bar/avatar/7.png);
+                            }
+                            .ava8{
+                                background-image: url(../../public/icon/sid_bar/avatar/8.png);
+                            }
+                            .ava9{
+                                background-image: url(../../public/icon/sid_bar/avatar/9.png);
+                            }
+                            .ava10{
+                                background-image: url(../../public/icon/sid_bar/avatar/10.png);
+                            }
+                            .ava11{
+                                background-image: url(../../public/icon/sid_bar/avatar/11.png);
+                            }
+                            .ava12{
+                                background-image: url(../../public/icon/sid_bar/avatar/12.png);
+                            }
+                            .ava13{
+                                background-image: url(../../public/icon/sid_bar/avatar/13.png);
+                            }
+                            .ava14{
+                                background-image: url(../../public/icon/sid_bar/avatar/14.png);
+                            }
+                            .ava15{
+                                background-image: url(../../public/icon/sid_bar/avatar/15.png);
+                            }
+                        }
+                    }
+                }
+            }
+            .avatars_selector::after{
+                content: '';
+                position: absolute;
+                width: 50%;
+                height: 150%;
+                background: linear-gradient(#16607d, #8d1c78);
+                animation: rotate_avatar 5s linear infinite;
+            }
+        }
+    }
+}
+//***************animation
+//roumouch
+@keyframes roumouch {
+    0%{
+        top: -5%;
+    }
+    5%{
+        top: -100%;
+    }
+    95%{
+        top: -100%;
+    }
+    100%{
+        top: -5%;
+    }
+}
+//hand
+@keyframes hand_up_left{
+    0%{
+        transform: rotateZ(150deg) translate(-40px,-250px);;
+    }
+    100%{
+        transform: rotateZ(150deg) translate(-40px,-50px);
+    }
+}
+@keyframes hand_down_left{
+    0%{
+        transform: rotateZ(150deg) translate(-40px,-50px);;
+    }
+    100%{
+        transform: rotateZ(150deg) translate(-40px,-250px);
+    }
+}
+@keyframes hand_up_right{
+    0%{
+        transform: rotateZ(210deg) rotateY(150deg) translate(-40px,-250px);
+    }
+    100%{
+        transform: rotateZ(210deg) rotateY(150deg) translate(-40px,-50px);
+    }
+}
+@keyframes hand_down_right{
+    0%{
+        transform: rotateZ(210deg) rotateY(150deg) translate(-40px,-50px);
+    }
+    100%{
+        transform: rotateZ(210deg) rotateY(150deg) translate(-40px,-250px);
+    }
+}
+//mouth
+@keyframes mouse_login_enter {
+    0%{
+        height: 5px;
+    }
+    100%{
+        height: 10px;
+    }
+}
+@keyframes mouse_login_sort {
+    0%{
+        height: 10px;
+    }
+    100%{
+        height: 5px;
+    }
+}
+@keyframes mouse_user_enter {
+    0%{
+        height: 10px;
+    }
+    100%{
+        height: 15px;
+    }
+}
+@keyframes mouse_user_sort {
+    0%{
+        height: 15px;
+    }
+    100%{
+        height: 10px;
+    }
+}
+//down
+@keyframes sun_set {
+    100%{
+        transform: translateY(50px);
+        background-color: #fea08b;
+        box-shadow: 0 0 50px 30px #fc937b;
+    }
+}
+@keyframes bg_back {
+    100%{
+        transform: translateY(-50%);
+    }
+}
+@keyframes bg_midel {
+    100%{
+        transform: translateY(-75%);
+    }
+}
+@keyframes bg_frant {
+    100%{
+        transform: translateY(-100%);
+    }
+}
+@keyframes log_anime {
+    100%{
+        transform: translateY(-150%);
+    }
+}
+@keyframes left_tree_anime {
+    100%{
+        transform: translate(-50% , -100%);
+    }
+}
+@keyframes right_tree_anime {
+    100%{
+        transform: translate(50% , -100%);
+    }
+}
+//up
+//down
+@keyframes sun_rise {
+    100%{
+        transform: translateY(0px);
+        background-color: #f4e8e6;
+        box-shadow: 0 0 50px 10px #ecc8c0;
+    }
+}
+@keyframes all_up {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+@keyframes left_tree_anime_back {
+    0%{
+        transform: translate(-50% , -100%);
+    }
+    100%{
+        transform: translate(0% ,0%);
+    }
+}
+@keyframes right_tree_anime_back {
+    0%{
+        transform: translate(50% , -100%);
+    }
+    100%{
+        transform: translate(0% ,0%);
+    }
+}
+///////new
+//form
+@keyframes rotate_new_user {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotate_avatar {
+    100%{
+        transform: rotate(-360deg);
+    }
 }

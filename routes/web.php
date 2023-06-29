@@ -9,8 +9,6 @@ use App\Http\Controllers\ItemsController;
 use App\Http\Controllers\TicketController;
 use App\Http\Controllers\CarrencyController;
 use App\Http\Controllers\Controller;
-use App\Models\Icon;
-use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /////////////////////////////controllers
@@ -19,20 +17,13 @@ Route::get('/user', [UserController::class, 'index'])
 ->name('user.index');
 Route::get('user/{user}', [UserController::class, 'login'])
 ->name('user.login');
-Route::post('user', [UserController::class, 'store'])
+Route::post('/user', [UserController::class, 'store'])
 ->name('user.store');
 Route::put('user/{user}', [UserController::class, 'update'])
 ->name('user.update');
 Route::delete('user', [UserController::class, 'destroy'])
 ->name('user.destroy');
 
-///////////////redirect with /{}
-// return redirect()->route(
-//     // 'user.cache_stor',
-//     'user.index',
-//     ['cache' => true]
-// );
-///////////////
 /**themes */
 Route::get('Themes', [ThemesController::class, 'index'])
 ->name('themes.index');

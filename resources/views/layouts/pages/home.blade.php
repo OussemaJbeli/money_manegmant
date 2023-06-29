@@ -1,3 +1,6 @@
+{{-- loading _page --}}
+{{-- @include('loading_page') --}}
+{{--  --}}
 @extends('layouts.frames.main_frame')
 @section('container')
     <div class="home page" id="dashboard_page">

@@ -5,12 +5,6 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use PDO;
-//stor cache
-use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Response;
-use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\Storage;
-
 
 class UserController extends Controller
 {
@@ -47,7 +41,6 @@ class UserController extends Controller
                 $password_test='true';
             }
         }
-        
         if($password_test=='true'){
             return redirect()->route('user.index')->with('user_data',$table);
         }
@@ -75,12 +68,7 @@ class UserController extends Controller
     public function store(Request $request)
     {
         echo 'stored';
-        // Handle the creation of a new user based on the $request data
-        // Example: User::create($request->all());
-
-        return redirect()->route('users.index')->with('success', 'User created successfully.');
     }
-
     public function show()
     {
         echo 'show';
