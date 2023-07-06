@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+} 
+body{
+    overflow: hidden;
+    .login{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        perspective: 1000px;
+        //////////bg
+        @import "back_ground.scss";
+        ///////////form-login
+        .flip_card_tow_face{
+            width: 500px;
+            height: 500px;
+            position: relative;
+            margin-bottom: 50px;
+            transform-style: preserve-3d;
+            transition: 1s ease;
+            transform-origin: 100% 0%;
+            @import "login_user.scss";
+            @import "forget_password.scss";
+        }
+    }
+    .new{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #031229;
+        ///////////form-login
+        @import "create_new.scss";
+    }
+}
+//***************animation
+@import "animations.scss";

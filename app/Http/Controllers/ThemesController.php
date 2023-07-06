@@ -15,7 +15,7 @@ class ThemesController extends Controller
 
     public function index()
     {
-        $name_test = Themes::where('id_user', session('user_id'))
+        $name_test = Themes::where('id_user', session('user_name'))
             ->first();
         $table = $name_test->toArray();
         session([
@@ -46,7 +46,7 @@ class ThemesController extends Controller
         $color_side_popup = $request->input('color_side_popup');
 
         //
-        $theme = Themes::where('id', session('user_id'))
+        $theme = Themes::where('id_user', session('user_name'))
             ->first();
         $theme->color_side_barre = $db_theme_img;
         $theme->side_color_cards = $db_theme_actions_color;
@@ -58,6 +58,25 @@ class ThemesController extends Controller
         $theme->title_popup = $title_popup;
         $theme->color_item_popup = $color_item_popup;
         $theme->color_side_popup = $color_side_popup;
+        $theme->save(); 
+
+        return redirect()->route('themes.index');
+    }
+    public function store(Request $request)
+    {
+        $id_user = session('user_name');
+        $theme = new Themes();
+        $theme->id_user = $id_user;
+        $theme->side_color_cards = '#ffc502';
+        $theme->color_side_barre= 'url(../../../../../public/icon/sid_bar/wallpapers/img_1.jpg)';
+        $theme->color_search_barre = '#2a3347';
+        $theme->color_frame = '#1a2035';
+        $theme->color_popup = '#1a2035';
+        $theme->color_side_barre_hover = '#9393c051';
+        $theme->title_search_bar = '#fff';
+        $theme->title_popup = '#fff';
+        $theme->color_item_popup = '#2a3347';
+        $theme->color_side_popup = '#3c455a';
         $theme->save(); 
 
         return redirect()->route('themes.index');

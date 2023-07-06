@@ -7,7 +7,7 @@ export default defineConfig({
             input: [
             /*css */'resources/css/app.css',
             /*scss*/'resources/scss/layouts/frames/main_frame.scss',
-                    'resources/scss/login.scss',
+                    'resources/scss/login/login.scss',
                     'resources/scss/layouts/pages/pages.scss',
                     'resources/scss/layouts/frames/loading_page.scss',
             /*js  */'resources/js/app.js',

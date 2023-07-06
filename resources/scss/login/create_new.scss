@@ -1,0 +1,299 @@
+.up{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    background-color: #051936;
+    box-shadow: 0 0 15px 1px #16607d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    i{
+        color: #16607d;
+        font-size: 55px;
+    }
+}
+form{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .create_info{
+        position: relative;
+        width: 500px;
+        height: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        overflow: hidden;
+        border: 0 solid transparent;
+        border-radius: 0 60px 0 60px;
+        .fildes{
+            width: 99%;
+            height: 99%;
+            background-color: #051936;
+            z-index: 1;
+            border: 0 solid transparent;
+            border-radius: 0 60px 0 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            p{
+                width: 100%;
+                height: 20%;
+                font-size: 35px;
+                font-weight: 900;
+                text-transform: uppercase;
+                color: #16607d;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .inputs{
+                width: 100%;
+                height: 40%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-direction: column;
+                input{
+                    width: 70%;
+                    height: 50px;
+                    border-style: solid;
+                    background-color: transparent;
+                    border-color: transparent transparent #16607d;
+                    color: #ffffff;
+                    font-size: 18px;
+                    font-weight: 900;
+                    outline: none;
+                }
+                .field{
+                    width: 100%;
+                    height: 90px;
+                    padding-left: 30%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: start;
+                    align-items: start;
+                    input{
+                        width: 70%;
+                        height: 60%;
+                        border-style: solid;
+                        background-color: transparent;
+                        border-color: transparent transparent #16607d;
+                        color: #ffffff;
+                        font-size: 20px;
+                        font-weight: 900;
+                        outline: none;
+                    }
+                    p{
+                        width: 100%;
+                        font-size: 15px;
+                        font-weight: 600;
+                        text-transform: lowercase;
+                        display: block;
+                    }
+                }
+            }
+            .sub_user{
+                width: 100%;
+                height: 20%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                #new_user_submit{
+                    width: 50%;
+                    height: 50px;
+                    border-radius: 10px;
+                    border: 0px solid #16607d;
+                    background-color: #16607d;
+                    color: #fff;
+                    font-size: 25px;
+                    transition: .4s ease;
+                }
+                #new_user_submit:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+    .create_info::after{
+        content: '';
+        position: absolute;
+        width: 50%;
+        height: 150%;
+        background: linear-gradient(#16607d, #8d1c78);
+        animation: rotate_new_user 5s linear infinite;
+    }
+    .avatars_selector{
+        position: relative;
+        width: 650px;
+        height: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        overflow: hidden;
+        border: 0 solid transparent;
+        border-radius: 60px 0 60px 0;
+        .panel{
+            width: 99%;
+            height: 99%;
+            background-color: #051936;
+            z-index: 1;
+            border: 0 solid transparent;
+            border-radius: 60px 0 60px 0;
+            .security_question{
+                width: 100%;
+                height: 30%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                p{
+                    width: 100%;
+                    height: 30%;
+                    font-size: 35px;
+                    font-weight: 900;
+                    text-transform: uppercase;
+                    color: #16607d;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .input{
+                    width: 70%;
+                    height: 50px;
+                    border-style:solid;
+                    border-color: transparent transparent #16607d;
+                    outline: none;
+                    background-color: transparent;
+                    color: #fff;
+                    font-size: 20px;
+                }
+                /* Style the dropdown list */
+                select {
+                    /* Add a background color */
+                    background-color: #f1f1f1;
+                    /* Change the font color */
+                    color: #333;
+                    /* Adjust the border */
+                    border: 1px solid #ccc;
+                    /* Modify the padding */
+                    padding: 8px;
+                    /* Change the font size */
+                    font-size: 14px;
+                    option {
+                        /* Add background and font color */
+                        background-color: #f1f1f1;
+                        color: #000;
+                    }
+                    option:focus {
+                        /* Add a background color */
+                        background-color: #ebebeb;
+                        outline: 2px solid #16607d;
+                    }
+                }
+            }
+            .avatars{
+                width: 100%;
+                height: 70%;
+                p{
+                    width: 100%;
+                    height: 20%;
+                    font-size: 35px;
+                    font-weight: 900;
+                    text-transform: uppercase;
+                    color: #16607d;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .avatars_panel{
+                    width: 100%;
+                    height: 80%;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    .avatar_img{
+                        width: 100px;
+                        height: 100px;
+                        margin: 0 0 10px 10px;
+                        border: 0 solid transparent;
+                        border-radius: 50%;
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        transition: .4s ease;
+                    }
+                    .avatar_img:hover{
+                        background-color: #16607d;
+                        box-shadow: 0 0 15px 1px #16607d;
+                    }
+                    .ava1{
+                        background-image: url(../../../public/icon/sid_bar/avatar/avatar1.png);
+                    }
+                    .ava2{
+                        background-image: url(../../../public/icon/sid_bar/avatar/avatar2.png);
+                    }
+                    .ava3{
+                        background-image: url(../../../public/icon/sid_bar/avatar/avatar3.png);
+                    }
+                    .ava4{
+                        background-image: url(../../../public/icon/sid_bar/avatar/avatar4.png);
+                    }
+                    .ava5{
+                        background-image: url(../../../public/icon/sid_bar/avatar/avatar5.png);
+                    }
+                    .ava6{
+                        background-image: url(../../../public/icon/sid_bar/avatar/avatar6.png);
+                    }
+                    .ava7{
+                        background-image: url(../../../public/icon/sid_bar/avatar/avatar7.png);
+                    }
+                    .ava8{
+                        background-image: url(../../../public/icon/sid_bar/avatar/avatar8.png);
+                    }
+                    .ava9{
+                        background-image: url(../../../public/icon/sid_bar/avatar/avatar9.png);
+                    }
+                    .ava10{
+                        background-image: url(../../../public/icon/sid_bar/avatar/avatar10.png);
+                    }
+                    .ava11{
+                        background-image: url(../../../public/icon/sid_bar/avatar/avatar11.png);
+                    }
+                    .ava12{
+                        background-image: url(../../../public/icon/sid_bar/avatar/avatar12.png);
+                    }
+                    .ava13{
+                        background-image: url(../../../public/icon/sid_bar/avatar/avatar13.png);
+                    }
+                    .ava14{
+                        background-image: url(../../../public/icon/sid_bar/avatar/avatar14.png);
+                    }
+                    .ava15{
+                        background-image: url(../../../public/icon/sid_bar/avatar/avatar15.png);
+                    }
+                    #selected_avatar_input{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .avatars_selector::after{
+        content: '';
+        position: absolute;
+        width: 50%;
+        height: 150%;
+        background: linear-gradient(#16607d, #8d1c78);
+        animation: rotate_avatar 5s linear infinite;
+    }
+}

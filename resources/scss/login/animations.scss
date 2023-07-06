@@ -1,0 +1,164 @@
+//roumouch
+@keyframes roumouch {
+    0%{
+        top: -5%;
+    }
+    5%{
+        top: -100%;
+    }
+    95%{
+        top: -100%;
+    }
+    100%{
+        top: -5%;
+    }
+}
+//hand
+@keyframes hand_up_left{
+    0%{
+        transform: rotateZ(150deg) translate(-40px,-250px);;
+    }
+    100%{
+        transform: rotateZ(150deg) translate(-40px,-50px);
+    }
+}
+@keyframes hand_down_left{
+    0%{
+        transform: rotateZ(150deg) translate(-40px,-50px);;
+    }
+    100%{
+        transform: rotateZ(150deg) translate(-40px,-250px);
+    }
+}
+@keyframes hand_up_right{
+    0%{
+        transform: rotateZ(210deg) rotateY(150deg) translate(-40px,-250px);
+    }
+    100%{
+        transform: rotateZ(210deg) rotateY(150deg) translate(-40px,-50px);
+    }
+}
+@keyframes hand_down_right{
+    0%{
+        transform: rotateZ(210deg) rotateY(150deg) translate(-40px,-50px);
+    }
+    100%{
+        transform: rotateZ(210deg) rotateY(150deg) translate(-40px,-250px);
+    }
+}
+//mouth
+@keyframes mouse_login_enter {
+    0%{
+        height: 5px;
+    }
+    100%{
+        height: 10px;
+    }
+}
+@keyframes mouse_login_sort {
+    0%{
+        height: 10px;
+    }
+    100%{
+        height: 5px;
+    }
+}
+@keyframes mouse_user_enter {
+    0%{
+        height: 10px;
+    }
+    100%{
+        height: 15px;
+    }
+}
+@keyframes mouse_user_sort {
+    0%{
+        height: 15px;
+    }
+    100%{
+        height: 10px;
+    }
+}
+//down
+@keyframes sun_set {
+    100%{
+        transform: translateY(50px);
+        background-color: #fea08b;
+        box-shadow: 0 0 50px 30px #fc937b;
+    }
+}
+@keyframes bg_back {
+    100%{
+        transform: translateY(-50%);
+    }
+}
+@keyframes bg_midel {
+    100%{
+        transform: translateY(-75%);
+    }
+}
+@keyframes bg_frant {
+    100%{
+        transform: translateY(-100%);
+    }
+}
+@keyframes log_anime {
+    100%{
+        transform: translateY(-150%);
+    }
+}
+@keyframes left_tree_anime {
+    100%{
+        transform: translate(-50% , -100%);
+    }
+}
+@keyframes right_tree_anime {
+    100%{
+        transform: translate(50% , -100%);
+    }
+}
+//up
+//down
+@keyframes sun_rise {
+    100%{
+        transform: translateY(0px);
+        background-color: #f4e8e6;
+        box-shadow: 0 0 50px 10px #ecc8c0;
+    }
+}
+@keyframes all_up {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+@keyframes left_tree_anime_back {
+    0%{
+        transform: translate(-50% , -100%);
+    }
+    100%{
+        transform: translate(0% ,0%);
+    }
+}
+@keyframes right_tree_anime_back {
+    0%{
+        transform: translate(50% , -100%);
+    }
+    100%{
+        transform: translate(0% ,0%);
+    }
+}
+///////new
+//form
+@keyframes rotate_new_user {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotate_avatar {
+    100%{
+        transform: rotate(-360deg);
+    }
+}

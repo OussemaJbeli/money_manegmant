@@ -45,7 +45,13 @@
         <div class="back_block_transparent"></div>
         <div class="side_color_picture" id="side_color_picture"></div>
         <div class="user_info">
-            <div class="logo" id="logo_profile"><i class="fa-solid fa-user-secret"></i></div>
+            <div class="logo" id="logo_profile">
+                <?php 
+                    $item_icon = session('user_path').'.png';
+                    $item_path=asset('icon/sid_bar/avatar/'.$item_icon);
+                    echo    '<img id="item_path" src="'.$item_path.'">';
+                ?>
+            </div>
             <p class="name" id="name_profile"><?php echo session('user_name')?></p>
         </div>
         <div class="options">

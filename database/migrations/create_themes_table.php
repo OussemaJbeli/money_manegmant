@@ -11,8 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('region', function (Blueprint $table) {
-            $table->foreignId("id_user")->constrained('users');
+        Schema::create('themes', function (Blueprint $table) {
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('name')->on('users')->onUpdate('cascade')->onDelete('cascade');;
             $table->string('ide_color_cards');
             $table->string('color_side_barre');
             $table->string('color_side_barre_hover');
@@ -32,6 +33,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('region');
+        Schema::dropIfExists('themes');
     }
 };

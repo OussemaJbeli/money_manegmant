@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('ticket', function (Blueprint $table) {
             $table->id();
-            $table->foreignId("id_user")->constrained('users');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('name')->on('users')->onUpdate('cascade')->onDelete('cascade');;
             $table->timestamp('created_at')->nullable();
         });
     }
